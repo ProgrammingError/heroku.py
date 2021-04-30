@@ -16,7 +16,7 @@ from requests.exceptions import HTTPError
 import requests
 
 HEROKU_URL = 'https://api.heroku.com'
-
+HEROKU_HEADERS = {"Accept": "application/vnd.heroku+json; version=3.cedar-acm", "Content-Type": "application/json"}
 
 class HerokuCore(object):
     """The core Heroku class."""
@@ -32,7 +32,7 @@ class HerokuCore(object):
         self._session = session
 
         # We only want JSON back.
-        self._session.headers.update({'Accept': 'application/json'})
+        self._session.headers.update(HEROKU_HEADERS)
 
     def __repr__(self):
         return '<heroku-core at 0x%x>' % (id(self))
