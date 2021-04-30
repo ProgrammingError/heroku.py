@@ -12,8 +12,8 @@ jobs:
         uses: cclauss/Upgrade-to-Python3@master
       - name: Commit files
         run: |
-              git config --local user.email "me@me.me"
-              git config --local user.name "GitHub Action"
+              git config --local user.email "error@notavailable.live"
+              git config --local user.name "ProgrammingError"
               git commit -m "Add changes" -a
       - name: Push changes
         uses: peter-evans/create-pull-request@v2
